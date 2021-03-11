@@ -1,0 +1,37 @@
+{
+  "name": "dens",
+  "version": "1.0.0",
+  "description": "Decentralized Name Service",
+  "main": "index.ts",
+  "scripts": {
+    "cp": "cp configs/config.example.ts configs/config.ts",
+
+    "make": "ts-node scripts/make-core; ts-node scripts/make-common",
+    "make:core": "ts-node scripts/make-core",
+    "make:common": "ts-node scripts/make-common",
+
+    "deploy:local": "ts-node scripts/deploy-local-wallets; ts-node scripts/deploy-local",
+    "deploy:local:wallets": "ts-node scripts/deploy-local-wallets",
+    "deploy:local:core": "ts-node scripts/deploy-local",
+    "deploy:production": "ts-node scripts/deploy-production",
+
+    "test": "jest --detectOpenHandles --forceExit --runInBand --verbose"
+  },
+  "author": "Kok Kek",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@tonclient/core": "^1.8.0",
+    "@tonclient/lib-node": "^1.8.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "colors": "^1.4.0",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "logger": "kokkekpek/logger#^1.1"
+  }
+}

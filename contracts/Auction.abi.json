@@ -1,0 +1,64 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"bidsDuration","type":"uint32"},
+				{"name":"submittingDuration","type":"uint32"},
+				{"name":"finishDuration","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "bid",
+			"inputs": [
+				{"name":"sender","type":"address"},
+				{"name":"periods","type":"uint8"},
+				{"name":"hash","type":"uint256"},
+				{"name":"needToCreate","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "submit",
+			"inputs": [
+				{"name":"salt","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "finish",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"finished","type":"bool"},
+				{"name":"periods","type":"uint8"},
+				{"name":"bidsEndTime","type":"uint32"},
+				{"name":"submittingEndTime","type":"uint32"},
+				{"name":"finishTime","type":"uint32"},
+				{"name":"firstWinnerAddress","type":"address"},
+				{"name":"firstWinnerValue","type":"uint128"},
+				{"name":"secondWinnerAddress","type":"address"},
+				{"name":"secondWinnerValue","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_name","type":"bytes"},
+		{"key":2,"name":"_root","type":"address"}
+	],
+	"events": [
+	]
+}

@@ -1,0 +1,139 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"manager","type":"address"},
+				{"name":"owner","type":"uint256"},
+				{"name":"expirationTime","type":"uint32"},
+				{"name":"price","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "receiveRegistrationInfo",
+			"inputs": [
+				{"name":"hash","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"rHash","type":"uint128"},
+				{"name":"expirationTime","type":"uint32"}
+			]
+		},
+		{
+			"name": "prolong",
+			"inputs": [
+				{"name":"expirationTime","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renew",
+			"inputs": [
+				{"name":"manager","type":"address"},
+				{"name":"owner","type":"uint256"},
+				{"name":"expirationTime","type":"uint32"},
+				{"name":"price","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setAddress",
+			"inputs": [
+				{"name":"key","type":"uint16"},
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "removeAddress",
+			"inputs": [
+				{"name":"key","type":"uint16"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeManager",
+			"inputs": [
+				{"name":"manager","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeOwner",
+			"inputs": [
+				{"name":"owner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "lock",
+			"inputs": [
+				{"name":"unlockTime","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "unlock",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "receiveAddress",
+			"inputs": [
+				{"name":"key","type":"uint16"}
+			],
+			"outputs": [
+				{"name":"addr","type":"address"}
+			]
+		},
+		{
+			"name": "whois",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"root","type":"address"},
+				{"name":"manager","type":"address"},
+				{"name":"owner","type":"uint256"},
+				{"name":"creationTime","type":"uint32"},
+				{"name":"expirationTime","type":"uint32"},
+				{"name":"managerUnlockTime","type":"uint32"},
+				{"name":"price","type":"uint128"}
+			]
+		},
+		{
+			"name": "getWhois",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"root","type":"address"},
+				{"name":"manager","type":"address"},
+				{"name":"owner","type":"uint256"},
+				{"name":"creationTime","type":"uint32"},
+				{"name":"expirationTime","type":"uint32"},
+				{"name":"managerUnlockTime","type":"uint32"},
+				{"name":"price","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_name","type":"bytes"},
+		{"key":2,"name":"_root","type":"address"}
+	],
+	"events": [
+	]
+}

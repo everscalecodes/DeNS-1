@@ -1,0 +1,152 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"certificateCode","type":"cell"},
+				{"name":"certificateDuration","type":"uint32"},
+				{"name":"certificateProlongationPeriod","type":"uint32"},
+				{"name":"certificateAuctionPeriod","type":"uint32"},
+				{"name":"certificateCheckLeapYear","type":"bool"},
+				{"name":"auctionCode","type":"cell"},
+				{"name":"auctionBidsDuration","type":"uint32"},
+				{"name":"auctionSubmittingDuration","type":"uint32"},
+				{"name":"auctionFinishDuration","type":"uint32"},
+				{"name":"manager","type":"address"},
+				{"name":"names","type":"bytes[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeManager",
+			"inputs": [
+				{"name":"manager","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"code","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createCertificate",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"expirationTime","type":"uint32"},
+				{"name":"price","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "prolongCertificate",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"expirationTime","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "auctionComplete",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"periods","type":"uint8"},
+				{"name":"addr","type":"address"},
+				{"name":"price","type":"uint128"},
+				{"name":"needToCreate","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "registerName",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"periods","type":"uint8"},
+				{"name":"bid","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onReceiveRegistrationInfo",
+			"inputs": [
+				{"name":"rHash","type":"uint128"},
+				{"name":"expirationTime","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getSettings",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"certificateCode","type":"cell"},
+				{"name":"certificateDuration","type":"uint32"},
+				{"name":"certificateProlongationPeriod","type":"uint32"},
+				{"name":"certificateAuctionPeriod","type":"uint32"},
+				{"name":"certificateCheckLeapYear","type":"bool"},
+				{"name":"auctionCode","type":"cell"},
+				{"name":"auctionBidsDuration","type":"uint32"},
+				{"name":"auctionSubmittingDuration","type":"uint32"},
+				{"name":"auctionFinishDuration","type":"uint32"}
+			]
+		},
+		{
+			"name": "getPublicKey",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"publicKey","type":"uint256"}
+			]
+		},
+		{
+			"name": "getManager",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"manager","type":"address"}
+			]
+		},
+		{
+			"name": "getVersionHistory",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"versionHistory","type":"uint32[]"}
+			]
+		},
+		{
+			"name": "resolve",
+			"inputs": [
+				{"name":"name","type":"bytes"}
+			],
+			"outputs": [
+				{"name":"addr","type":"address"}
+			]
+		},
+		{
+			"name": "resolveAuction",
+			"inputs": [
+				{"name":"name","type":"bytes"}
+			],
+			"outputs": [
+				{"name":"addr","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
