@@ -3,7 +3,7 @@
 
 ## Installation
 * Up local node from [INSTALLATION](INSTALLATION.md) instruction.
-* Set up `deploy.local.timeout` and `deploy.local.url` in "config.ts".
+* Set up `deploy.local.timeout` and `deploy.local.url` in "config.template.ts".
   * A value that is too small will crash tests.
   * Large value increases execution time
 

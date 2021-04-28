@@ -20,12 +20,12 @@ tondev set --port 8080 dens
 yarn install
 ```
 
-Copy config.example.ts to config.ts
+Copy config.example.ts to config.template.ts
 ```sh
 yarn cp
 ```
 
-Edit config/config.ts
+Edit config/config.template.ts
 ```ts
 export default {
     make: {
